@@ -1,7 +1,7 @@
 # Growth-Copy Harness
 
 ## What this project is
-A long-running agent harness that takes a product brief and produces VERIFIED
+An agent harness that takes a product brief and produces VERIFIED
 marketing landing pages. The harness - not the model - is responsible for making
 "done" mean "actually meets every acceptance criterion, with evidence."
 
