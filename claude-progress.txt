@@ -1,0 +1,3 @@
+# Claude Progress Log (newest entries at bottom)
+
+[INIT] Harness scaffolded. CLAUDE.md (rules), specs/feature_list.json (12 default-FAIL criteria: 8 structural/playwright + 4 copy/evaluator) in place. No variants built yet. All criteria currently false.
