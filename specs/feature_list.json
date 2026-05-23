@@ -1,30 +1,94 @@
 {
   "product_brief": "FactrAI - an AI news-subscription product that helps everyday readers get past paywalls to access quality journalism.",
-  "variants": ["variant-a", "variant-b", "variant-c"],
+  "variants": [
+    "variant-a",
+    "variant-b",
+    "variant-c"
+  ],
   "criteria": [
-    {"id": "S1", "type": "structural", "verifier": "playwright",
-     "desc": "Page has a <meta name=viewport> tag for mobile responsiveness.", "passes": false},
-    {"id": "S2", "type": "structural", "verifier": "playwright",
-     "desc": "A primary CTA element (button or link styled as button) exists within the first 700px of vertical scroll (above the fold).", "passes": false},
-    {"id": "S3", "type": "structural", "verifier": "playwright",
-     "desc": "Page contains exactly one <h1> element.", "passes": false},
-    {"id": "S4", "type": "structural", "verifier": "playwright",
-     "desc": "Every <img> element has a non-empty alt attribute.", "passes": false},
-    {"id": "S5", "type": "structural", "verifier": "playwright",
-     "desc": "Page includes schema.org structured data (a script[type='application/ld+json'] block).", "passes": false},
-    {"id": "S6", "type": "structural", "verifier": "playwright",
-     "desc": "There is exactly one primary CTA (one element with class or id containing 'cta-primary').", "passes": false},
-    {"id": "S7", "type": "structural", "verifier": "playwright",
-     "desc": "At 375px viewport width the page body does not scroll horizontally (no overflow).", "passes": false},
-    {"id": "S8", "type": "structural", "verifier": "playwright",
-     "desc": "Page opens as a standalone file with no external JS or server (no <script src> to remote URLs).", "passes": false},
-    {"id": "C1", "type": "copy", "verifier": "evaluator",
-     "desc": "The H1 headline clearly communicates what the product does and for whom, in plain language.", "passes": false},
-    {"id": "C2", "type": "copy", "verifier": "evaluator",
-     "desc": "The page presents a single, clear value proposition (not three competing messages).", "passes": false},
-    {"id": "C3", "type": "copy", "verifier": "evaluator",
-     "desc": "The primary CTA text is an action phrase (e.g. 'Start free', 'Get the app'), not generic ('Submit', 'Click here').", "passes": false},
-    {"id": "C4", "type": "copy", "verifier": "evaluator",
-     "desc": "No placeholder text remains (no 'lorem ipsum', no 'REPLACE_ME', no TODO).", "passes": false}
+    {
+      "id": "S1",
+      "type": "structural",
+      "verifier": "playwright",
+      "desc": "Page has a <meta name=viewport> tag for mobile responsiveness.",
+      "passes": false
+    },
+    {
+      "id": "S2",
+      "type": "structural",
+      "verifier": "playwright",
+      "desc": "A primary CTA element (button or link styled as button) exists within the first 700px of vertical scroll (above the fold).",
+      "passes": false
+    },
+    {
+      "id": "S3",
+      "type": "structural",
+      "verifier": "playwright",
+      "desc": "Page contains exactly one <h1> element.",
+      "passes": false
+    },
+    {
+      "id": "S4",
+      "type": "structural",
+      "verifier": "playwright",
+      "desc": "Every <img> element has a non-empty alt attribute.",
+      "passes": false
+    },
+    {
+      "id": "S5",
+      "type": "structural",
+      "verifier": "playwright",
+      "desc": "Page includes schema.org structured data (a script[type='application/ld+json'] block).",
+      "passes": false
+    },
+    {
+      "id": "S6",
+      "type": "structural",
+      "verifier": "playwright",
+      "desc": "There is exactly one primary CTA (one element with class or id containing 'cta-primary').",
+      "passes": false
+    },
+    {
+      "id": "S7",
+      "type": "structural",
+      "verifier": "playwright",
+      "desc": "At 375px viewport width the page body does not scroll horizontally (no overflow).",
+      "passes": false
+    },
+    {
+      "id": "S8",
+      "type": "structural",
+      "verifier": "playwright",
+      "desc": "Page opens as a standalone file with no external JS or server (no <script src> to remote URLs).",
+      "passes": false
+    },
+    {
+      "id": "C1",
+      "type": "copy",
+      "verifier": "evaluator",
+      "desc": "The H1 headline clearly communicates what the product does and for whom, in plain language.",
+      "passes": false
+    },
+    {
+      "id": "C2",
+      "type": "copy",
+      "verifier": "evaluator",
+      "desc": "The page presents a single, clear value proposition (not three competing messages).",
+      "passes": false
+    },
+    {
+      "id": "C3",
+      "type": "copy",
+      "verifier": "evaluator",
+      "desc": "The primary CTA text is an action phrase (e.g. 'Start free', 'Get the app'), not generic ('Submit', 'Click here').",
+      "passes": false
+    },
+    {
+      "id": "C4",
+      "type": "copy",
+      "verifier": "evaluator",
+      "desc": "No placeholder text remains (no 'lorem ipsum', no 'REPLACE_ME', no TODO).",
+      "passes": false
+    }
   ]
 }

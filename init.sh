@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Growth-Copy Harness — session bootstrap / "getting up to speed" ritual.
+# Growth-Copy Harness - session bootstrap / "getting up to speed" ritual.
 # Run this at the START of every session to rebuild context cheaply.
 set -e
 
