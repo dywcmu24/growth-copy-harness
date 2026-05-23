@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FactrAI — Read quality journalism without paywalls</title>
+<meta name="description" content="FactrAI helps everyday readers get past news paywalls and read quality journalism, simply.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FactrAI",
+  "applicationCategory": "NewsApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "description": "An AI news-subscription product that helps everyday readers get past paywalls to access quality journalism.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; max-width: 100%; overflow-x: hidden; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    background: #ffffff;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, svg { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Header */
+  .site-header {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+  }
+  .brand-mark {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: #2a6df4;
+    border-radius: 6px;
+    vertical-align: -5px;
+    margin-right: 8px;
+  }
+  .site-nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 18px;
+    font-size: 15px;
+  }
+  .site-nav a:hover { color: #1a1a1a; }
+
+  /* Hero */
+  .hero {
+    padding: 56px 0 40px;
+    background: linear-gradient(180deg, #f7f9ff 0%, #ffffff 100%);
+  }
+  .hero-inner {
+    max-width: 760px;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2a6df4;
+    background: #e8f0ff;
+    padding: 5px 10px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+    letter-spacing: 0.02em;
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 0 0 18px;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+  }
+  .lede {
+    font-size: 18px;
+    color: #444;
+    margin: 0 0 28px;
+    max-width: 620px;
+  }
+  .cta-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .cta-primary, .btn-secondary-cta {
+    display: inline-block;
+    background: #2a6df4;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 22px;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(42, 109, 244, 0.25);
+  }
+  .cta-primary:hover, .btn-secondary-cta:hover { background: #1f5ad6; }
+  .cta-note {
+    font-size: 14px;
+    color: #666;
+  }
+
+  /* Sections */
+  section {
+    padding: 56px 0;
+  }
+  h2 {
+    font-size: 26px;
+    margin: 0 0 24px;
+    letter-spacing: -0.01em;
+  }
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .benefit {
+    padding: 22px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 10px;
+  }
+  .benefit-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #e8f0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    color: #2a6df4;
+  }
+  .benefit h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+  }
+  .benefit p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .how {
+    background: #fafafa;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .step {
+    padding: 8px 0;
+  }
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #2a6df4;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .step h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+  }
+  .step p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .cta-band {
+    text-align: center;
+    padding: 56px 20px;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 14px;
+    margin: 24px auto;
+    max-width: 1060px;
+  }
+  .cta-band h2 { color: #fff; margin-bottom: 10px; }
+  .cta-band p { margin: 0 0 22px; color: #ccc; font-size: 16px; }
+
+  footer {
+    padding: 28px 0 40px;
+    color: #777;
+    font-size: 14px;
+    border-top: 1px solid #eee;
+  }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Mobile */
+  @media (max-width: 720px) {
+    .hero { padding: 36px 0 28px; }
+    h1 { font-size: 30px; }
+    .lede { font-size: 16px; }
+    .benefits, .steps { grid-template-columns: 1fr; }
+    .site-nav { display: none; }
+    section { padding: 40px 0; }
+    .cta-band { padding: 36px 18px; margin: 18px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span>FactrAI</div>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#how-it-works">How it works</a>
+      <a href="#benefits">Why FactrAI</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <span class="eyebrow">AI news subscription</span>
+        <h1>Read quality journalism without paywalls — built for everyday readers.</h1>
+        <p class="lede">FactrAI gives you one simple subscription that unlocks articles across major newspapers and magazines, so you can stay informed without juggling logins, paywalls, or single-publisher fees.</p>
+        <div class="cta-row">
+          <a class="cta-primary" id="cta-primary-hero" href="#signup">Start reading free</a>
+          <span class="cta-note">Free 7-day trial. Cancel anytime.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits">
+    <div class="container">
+      <h2>One subscription. Quality news from everywhere.</h2>
+      <div class="benefits">
+        <div class="benefit">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Past every paywall</h3>
+          <p>Read full articles from major papers without hitting "subscribe to continue."</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>One bill, not ten</h3>
+          <p>Pay for access once. Skip the maze of separate publisher subscriptions.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          </div>
+          <h3>Plain-English reading</h3>
+          <p>Tap any article for an AI summary in everyday language — no jargon, no fluff.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="how">
+    <div class="container">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num" aria-hidden="true">1</div>
+          <h3>Sign up in 30 seconds</h3>
+          <p>Create your account with just an email — no credit card for the trial.</p>
+        </div>
+        <div class="step">
+          <div class="step-num" aria-hidden="true">2</div>
+          <h3>Paste any article link</h3>
+          <p>Drop in a URL or browse our daily picks across politics, business, and culture.</p>
+        </div>
+        <div class="step">
+          <div class="step-num" aria-hidden="true">3</div>
+          <h3>Read the full story</h3>
+          <p>Get the unlocked article plus an optional plain-language summary on demand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-band">
+      <h2>Stop hitting paywalls. Start reading.</h2>
+      <p>Join readers who get quality journalism through one simple subscription.</p>
+      <a class="btn-secondary-cta" href="#signup">Start reading free</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div>&copy; 2026 FactrAI</div>
+    <div>contact@factrai.example</div>
+  </div>
+</footer>
+
+</body>
+</html>
