@@ -37,10 +37,26 @@ def run(variant):
         # S3: exactly one <h1>
         results["S3"] = page.locator("h1").count() == 1
 
-        # S4: every <img> has non-empty alt
+        # S4: every information-bearing visual (img AND inline svg) has an accessible label.
+        # img -> non-empty alt. inline svg -> aria-label, OR role=img + a <title>,
+        # OR explicitly decorative (aria-hidden=true). Anything else is a violation.
         imgs = page.locator("img")
         n = imgs.count()
-        results["S4"] = all((imgs.nth(i).get_attribute("alt") or "").strip() != "" for i in range(n)) if n >= 0 else True
+        imgs_ok = all((imgs.nth(i).get_attribute("alt") or "").strip() != "" for i in range(n))
+
+        svgs = page.locator("svg")
+        m = svgs.count()
+        def svg_ok(el):
+            if (el.get_attribute("aria-hidden") or "").lower() == "true":
+                return True  # explicitly decorative -> fine
+            if (el.get_attribute("aria-label") or "").strip() != "":
+                return True  # has an accessible name
+            if (el.get_attribute("role") or "").lower() == "img" and el.locator("title").count() > 0:
+                return True  # role=img + a <title> element
+            return False
+        svgs_ok = all(svg_ok(svgs.nth(i)) for i in range(m))
+
+        results["S4"] = imgs_ok and svgs_ok
 
         # S5: schema.org JSON-LD block present
         results["S5"] = page.locator("script[type='application/ld+json']").count() > 0

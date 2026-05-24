@@ -1,0 +1,19 @@
+{
+  "A_aware": {
+    "n": 20,
+    "truncated": 0,
+    "svg_dominant_rate": 0.0,
+    "zero_img_rate": 0.0,
+    "avg_img": 5.55,
+    "avg_svg": 0.3
+  },
+  "B_blind": {
+    "n": 20,
+    "truncated": 0,
+    "svg_dominant_rate": 0.0,
+    "zero_img_rate": 1.0,
+    "avg_img": 0.0,
+    "avg_svg": 0.0
+  },
+  "spend_usd": 8.8457
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessibility Test Page</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Thing"}</script>
+</head>
+<body>
+  <h1>Test page for the accessibility check</h1>
+
+  <!-- GOOD image: has alt text, a screen reader can describe it -->
+  <img src="team-photo.png" alt="Our team standing in front of the office">
+
+  <!-- BAD image: NO alt text, a screen reader cannot describe it -->
+  <img src="product-screenshot.png">
+
+  <a class="cta-primary" href="#go">Start now</a>
+</body>
+</html>

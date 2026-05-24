@@ -31,7 +31,7 @@
       "id": "S4",
       "type": "structural",
       "verifier": "playwright",
-      "desc": "Every <img> element has a non-empty alt attribute.",
+      "desc": "Every information-bearing visual has an accessible label: each <img> has non-empty alt, AND each inline <svg> has aria-label or role='img'+<title>, or is explicitly decorative (aria-hidden='true').",
       "passes": false
     },
     {

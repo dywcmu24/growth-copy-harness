@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bad inline SVG test</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Thing"}</script>
+</head>
+<body>
+  <h1>Page whose only visual is an unlabeled inline SVG</h1>
+  <!-- An information-bearing inline SVG icon with NO accessibility label -->
+  <svg width="48" height="48"><rect x="8" y="8" width="32" height="32" rx="6"/></svg>
+  <p>This page has zero img tags. Old S4 passes it vacuously.</p>
+  <a class="cta-primary" href="#go">Start now</a>
+</body>
+</html>

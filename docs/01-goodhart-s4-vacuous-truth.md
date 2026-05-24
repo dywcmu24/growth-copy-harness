@@ -75,10 +75,10 @@ one more way for "done" to mean less than it should.
 
 ## Status
 
-- [ ] verify.py S4 logic upgraded
-- [ ] feature_list.json S4 description updated
-- [ ] re-verified: a no-image page no longer passes S4 vacuously
-- [ ] evidence sample saved under docs/screenshots/
+- [x] verify.py S4 logic upgraded
+- [x] feature_list.json S4 description updated
+- [x] re-verified: test-bad-svg and variant-a now correctly FAIL S4
+- [x] patch verified across 3 cases (test-bad-svg, test-bad-images regression, variant-a)
 
 ---
 
@@ -93,3 +93,21 @@ The independent evaluator sub-agent's copy verdict:
 ```json
 { "C1": true, "C2": true, "C3": true, "C4": true }
 ```
+
+---
+
+## Patch result (verified)
+
+S4 was upgraded from "every `<img>` has alt" to "every information-bearing visual
+(img AND inline svg) carries an accessible label." Verified across three cases:
+
+| Page | S4 before | S4 after | Why |
+|------|-----------|----------|-----|
+| `test-bad-svg` (one unlabeled inline svg, zero img) | PASS (vacuous) | **FAIL** | new logic catches the unlabeled svg |
+| `test-bad-images` (img missing alt) | FAIL | FAIL | regression: old capability intact |
+| `variant-a` (the original false-green page) | PASS | **FAIL** | the page that fooled S4 is now caught |
+
+The page was never edited — only the verifier's coverage was widened. The anchor moved
+from an *implementation* (img) to the *intent* (any information-bearing visual must be
+accessible). Known remaining blind spot: CSS background images carry no DOM tag and
+cannot be detected — flagged for v2.

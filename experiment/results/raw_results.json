@@ -1,0 +1,286 @@
+{
+  "A_aware": [
+    {
+      "run": 1,
+      "img": 7,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 2,
+      "img": 7,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 3,
+      "img": 7,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 4,
+      "img": 7,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 5,
+      "img": 5,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 6,
+      "img": 5,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 7,
+      "img": 4,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 8,
+      "img": 7,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 9,
+      "img": 7,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 10,
+      "img": 7,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 11,
+      "img": 2,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 12,
+      "img": 4,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 13,
+      "img": 7,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 14,
+      "img": 4,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 15,
+      "img": 7,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 16,
+      "img": 5,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 17,
+      "img": 7,
+      "svg": 6,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 18,
+      "img": 4,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 19,
+      "img": 4,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 20,
+      "img": 4,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    }
+  ],
+  "B_blind": [
+    {
+      "run": 1,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 2,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 3,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 4,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 5,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 6,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 7,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 8,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 9,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 10,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 11,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 12,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 13,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 14,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 15,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 16,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 17,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 18,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 19,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    },
+    {
+      "run": 20,
+      "img": 0,
+      "svg": 0,
+      "stop": "end_turn",
+      "valid": true
+    }
+  ]
+}
